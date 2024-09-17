@@ -1,4 +1,4 @@
----
+
 name: SonarCloud
 on:
   push:
@@ -47,4 +47,3 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"frodriguezcalo_PracticoSonarCube" /o:"frodriguezcalo" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
-...
